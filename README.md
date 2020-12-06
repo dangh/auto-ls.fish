@@ -5,10 +5,10 @@ Auto list directory content whenever working directory changed
 ### Installation
 
 ```sh
-fisher add dangh/fish-auto-ls
+fisher install dangh/auto-ls.fish
 ```
 
-### Configuration
+### Options
 
 By default it will run `ls -GF` whenever you change the working directory. You can change the command with variable `auto_ls_command`.
 
