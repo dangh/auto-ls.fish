@@ -15,5 +15,5 @@ By default it will run `ls -GF` whenever you change the working directory. You c
 For example, to show hidden files/directories by default:
 
 ```sh
-set -Ux auto_ls_command 'ls -AGF'
+set -U auto_ls_command 'ls -AGF'
 ```
