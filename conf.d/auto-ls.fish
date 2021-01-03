@@ -6,5 +6,6 @@ if status is-interactive
   end
   function auto-ls-init --on-event fish_prompt
     set --global auto_ls_initialized
+    functions --erase auto-ls-init
   end
 end
