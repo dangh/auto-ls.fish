@@ -1,11 +1,8 @@
-if status is-interactive
+status is-interactive || exit
+
+function auto-ls --on-event fish_prompt
   function auto-ls --on-variable PWD
-    set --query auto_ls_initialized || return
-    set --query auto_ls_command || set --local auto_ls_command 'ls -GF'
+    test -n "$auto_ls_command" || set --local auto_ls_command 'ls -GF'
     eval $auto_ls_command
-  end
-  function auto-ls-init --on-event fish_prompt
-    set --global auto_ls_initialized
-    functions --erase auto-ls-init
   end
 end
